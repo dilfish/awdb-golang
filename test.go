@@ -15,7 +15,7 @@ func main() {
 
 	defer db.Close()
 
-	ip := net.ParseIP("1.192.90.1")
+	ip := net.ParseIP("166.111.4.100")
 
 	var record interface{}
 	err = db.Lookup(ip, &record)
