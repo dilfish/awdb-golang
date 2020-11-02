@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	db, err := awdb.Open("IP_city_single_BD09_WGS84_ipv6_awdb.awdb")
+	db, err := awdb.Open("C:/Users/admin/Desktop/allawdb/IP_city_single_BD09_WGS84_ipv6_awdb.awdb")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -22,6 +22,9 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	var resMap = record.(map[string]interface{})
+	fmt.Printf("accuracy:%s", resMap["accuracy"])
+	fmt.Println()
 	fmt.Printf("%s", record)
 
 }
