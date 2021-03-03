@@ -1,3 +1,3 @@
 module github.com/dilfish/awdb-golang/awdb-golang
 
-go 1.15
+go 1.16
