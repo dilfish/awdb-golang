@@ -357,6 +357,7 @@ func (d *decoder) unmarshalString(size uint, offset uint, result reflect.Value) 
 		return newOffset, nil
 	case reflect.Interface:
 		if result.NumMethod() == 0 {
+			value := []byte(value)
 			result.Set(reflect.ValueOf(value))
 			return newOffset, nil
 		}
